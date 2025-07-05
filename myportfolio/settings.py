@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(casub#q=xw(maitq3j7$2c14rwju6r6vl-8*p6ay=0vs4_o8t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dynamic-portfolio-1-x3kg.onrender.com']
 
 
 # Application definition
