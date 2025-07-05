@@ -1,0 +1,631 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Vinay Sharma Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+
+<link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Vinay Sharma</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					{% load static %}
+
+<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+    data-scrollax-parent="true">
+    <div class="one-third js-fullheight order-md-last img"
+        style="background-image:url('{% static 'images/main-2.webp' %}'); max-height: 450px; max-width: 600px; border-radius: 10px;">
+        <div class="overlay"></div>
+    </div>
+    <div class="one-forth d-flex  align-items-center ftco-animate"
+        data-scrollax=" properties: { translateY: '70%' }">
+        <div class="text">
+            <span class="subheading">Hello!</span>
+            <h1 class="mb-4 mt-3">I'm <span>Vinay Sharma</span></h1>
+
+            <!-- Element to contain animated typing -->
+            <span id="typing-animation"></span>
+
+            <script>
+                const typingAnimationElement = document.getElementById('typing-animation');
+                const typingTexts = ['Backend Developer  ', 'Python Developer  ', 'Django   '];
+
+                function playTypingAnimation(text) {
+                    for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                            typingAnimationElement.textContent += text[i];
+                        }, i * 200);
+                    }
+
+                    setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                    }, text.length * 200);
+                }
+
+                playTypingAnimation(typingTexts[0]);
+            </script>
+
+            <br><br>
+            <h2>A Backend Developer</h2>
+            <p>
+                <a href="https://github.com/VinaySharma001" class="btn btn-primary py-3 px-4">My Works</a>
+            </p>
+        </div>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="{% static 'images/myself.jpg'%}" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name : </span> <span>Vinay Sharma</span></p>
+											<p><span class="title-s">Job Role : </span> <span>Backend Developer
+													Intern</span></p>
+											<p><span class="title-s">Experience : </span> <span>6 Months</span></p>
+											<p><span class="title-s">Address : </span> <span>Shimla, India</span></p>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+    <p class="title-s">Top Skills</p>
+
+    {% for skill in skills %}
+        <span>{{ skill.name }}</span> 
+        <span class="pull-right">{{ skill.percentage }}%</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ skill.percentage }}%;"
+                aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>
+									I am a passionate Backend Developer Intern with hands-on experience in building
+									scalable and secure web applications using Python, Django, and FastAPI. Currently in
+									the final year of my BCA, I have 6 months of industry experience working with
+									RESTful APIs, SQL databases, and Docker-based deployment environments.
+									<br>
+									I'm enthusiastic about clean code, backend architecture, and continuous learning. I
+									enjoy turning complex backend logic into efficient and maintainable systems.
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Backend Developer Intern</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Web Development, REST APIs, Database
+											Design</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Computer Applications
+											(Pursuing)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>Backend Stack:</span> <span>Python, Django, FastAPI, SQL
+											(PostgreSQL/MySQL)</span></li>
+									<li class="d-flex"><span>Tools & Platforms:</span> <span>Docker, Git, GitHub, Linux
+											(basic), VS Code</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Problem Solving, Open Source,
+											Backend Architecture</span></li>
+								</ul>
+
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+
+								<p><a href="https://www.linkedin.com/in/vinay-sharma-862ba0296/"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>
+						Backend Developer Intern with hands-on experience in developing RESTful APIs, managing
+						databases, and building scalable web services using Python, Django, and FastAPI. Currently
+						pursuing a Bachelor's degree in Computer Applications (BCA), with 6 months of industry
+						experience and a strong foundation in backend logic, SQL, and deployment tools like Docker.
+						Passionate about clean code, backend architecture, and continuous learning.
+					</p>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024 - Present</span>
+						<h2>Backend Developer Intern</h2>
+						<span class="position">CyberForce Academy</span>
+						<p class="mt-4">Contributed to backend development tasks in a real-world, production-level
+							environment. Worked closely with senior developers and product teams to deliver maintainable
+							and scalable backend solutions.</p>
+						<ul>
+							<li>Developed and maintained RESTful APIs using Django and FastAPI.</li>
+							<li>Worked with SQL databases (PostgreSQL, MySQL) for data modeling and query optimization.
+							</li>
+							<li>Collaborated using Git and GitHub for version control and code reviews.</li>
+							<li>Assisted in containerizing applications using Docker for deployment.</li>
+							<li>Participated in sprint planning, debugging, and backend code optimization.</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023 - Present</span>
+						<h2>Bachelor of Computer Applications (BCA)</h2>
+						<span class="position">gc solan</span>
+						<p class="mt-4">Currently pursuing final year with a focus on backend development, databases,
+							and web technologies.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021 - 2022</span>
+						<h2>Higher Secondary School (12th Grade)</h2>
+						<span class="position">S.V.M</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are sample Backend Development projects built using Django, Python, SQL, and RESTful APIs.
+					</p>
+
+				</div>
+			</div>
+			{% load static %}
+
+<div class="row d-flex">
+	<div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry justify-content-end">
+			<a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql"
+				class="block-20 zoom-effect" style="background-image: url('{% static 'images/twitter_app.jpeg' %}');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+				<h3 class="heading">
+					<a href="https://github.com/your-username/twitter-django-app" target="_blank">
+						Twitter-Style Social Media App using Django
+					</a>
+				</h3>
+				<p>Built a full-featured Twitter-like web app using Django, including post creation, user
+					profiles, likes, and following system. Implemented responsive design and secure user
+					authentication.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry justify-content-end">
+			<a href="https://github.com/VinaySharma001/Todo-App" target="_blank"
+				class="block-20 zoom-effect" style="background-image: url('{% static 'images/todo_app.png' %}');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+				<h3 class="heading">
+					<a href="https://github.com/VinaySharma001/Todo-App" target="_blank">
+						To-Do List Application using Django
+					</a>
+				</h3>
+				<p>Developed a task management app using Django, allowing users to create, update, and
+					delete tasks. Features include deadline tracking, task filtering, and user
+					authentication.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry">
+			<a href="https://github.com/VinaySharma001/Weather-App" target="_blank"
+				class="block-20 zoom-effect" style="background-image: url('{% static 'images/weather_app.jpeg' %}');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+				<h3 class="heading">
+					<a href="https://github.com/VinaySharma001/Weather-App" target="_blank">
+						Weather Forecast Application using API Integration
+					</a>
+				</h3>
+				<p>Built a dynamic weather app using Django and OpenWeatherMap API to display real-time
+					weather data based on user input. Includes temperature, humidity, and condition
+					icons with responsive UI.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+
+<div class="row d-flex justify-content-center">
+	<div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry justify-content-end">
+			<a href="https://github.com/VinaySharma001/django-music-player"
+				class="block-20 zoom-effect" style="background-image: url('{% static 'images/musicPlayer_app.png' %}');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+				<h3 class="heading">
+					<a href="https://github.com/VinaySharma001/django-music-player" target="_blank">
+						Music Player Web App using Django
+					</a>
+				</h3>
+				<p>Created a web-based music player using Django that allows users to upload, play, and
+					organize audio files. Implemented playlist management, track progress bar, and
+					responsive media controls.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry justify-content-end">
+			<a href="https://github.com/VinaySharma001/ipl-extension" target="_blank"
+				class="block-20 zoom-effect" style="background-image: url('{% static 'images/ipl_extension.jpeg' %}');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+				<h3 class="heading">
+					<a href="https://github.com/VinaySharma001/ipl-extension" target="_blank">
+						IPL Cricket Match Info Extension
+					</a>
+				</h3>
+				<p>Developed a browser extension that displays real-time information about IPL matches
+					including ongoing scores, past results, and upcoming fixtures using live API
+					integration and dynamic rendering.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(' {% static 'images/bg_1.jpg' %}')">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/VinaySharma001" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Shimla, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+ 0 101 0101 101</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:info@yoursite.com">vs6737440@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="#">resumelink</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span>  </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/vinay-sharma-862ba0296/"><span
+									class="icon-linkedin"></span></a></li>
+						
+						<li class="ftco-animate"><a href="https://www.instagram.com/vinayy_0199/"><span
+									class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved 
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/scrollax.min.js' %}"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
